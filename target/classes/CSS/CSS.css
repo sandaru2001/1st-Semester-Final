@@ -1,0 +1,26 @@
+.txtBar{
+    -fx-rotate: -1;
+}
+
+.loginFormTxt{
+    -fx-prompt-text-fill: #FFFFFF;
+}
+
+.btn{
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-border-radius: 20px 20px 20px 20px;
+}
+
+.btnDashboard{
+    -fx-background-color:  #f6b909;
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-border-radius: 20px 20px 20px 20px;
+}
+
+.DatePicker{
+    -fx-font-size: 20;
+}
+
+.comboBox{
+    -fx-font-size: 17px;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.ManageSupDetailsController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="20.0" layoutY="13.0" prefHeight="800.0" prefWidth="1111.0">
+         <children>
+            <Label layoutX="357.0" layoutY="28.0" text="Supplier Details Manage">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="123.0" text="Supplier Id">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="605.0" layoutY="121.0" text="Item Code">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="217.0" text="Quantity">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSupquantity" layoutX="138.0" layoutY="244.0" prefHeight="50.0" prefWidth="245.0" />
+            <Label layoutX="602.0" layoutY="217.0" text="Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="376.0" onAction="#btnSaveOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: blue;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="678.0" layoutY="376.0" onAction="#btnDeleteOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: red;" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="837.0" layoutY="376.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: green;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="534.0" layoutY="376.0" onAction="#btnClearOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: yellow;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="740.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: grewhitey;" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TableView fx:id="tblSupDetails" layoutX="11.0" layoutY="443.0" onMouseClicked="#tblSupDetailsOnMouseClicked" prefHeight="287.0" prefWidth="1074.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="212.0" text="Supplier Id" />
+                  <TableColumn fx:id="colItemcode" prefWidth="275.0" text="Item Code" />
+                  <TableColumn fx:id="colQuantity" prefWidth="297.0" text="Quantity" />
+                  <TableColumn fx:id="colDate" prefWidth="289.0" text="Date" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="comSupplierid" layoutX="138.0" layoutY="152.0" prefHeight="50.0" prefWidth="245.0" styleClass="comboBox" stylesheets="@../CSS/CSS.css" />
+            <ComboBox fx:id="comItemcode" layoutX="601.0" layoutY="152.0" prefHeight="50.0" prefWidth="245.0" styleClass="comboBox" stylesheets="@../CSS/CSS.css" />
+            <DatePicker fx:id="txtSupDate" layoutX="601.0" layoutY="244.0" prefHeight="50.0" prefWidth="245.0" />
+         </children>
+      </AnchorPane>
+      <Line endX="-234.0" endY="680.0" layoutX="245.0" layoutY="143.0" startX="-234.0" startY="-133.0" strokeWidth="10.0" />
+   </children>
+</AnchorPane>

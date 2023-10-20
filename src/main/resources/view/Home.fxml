@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.HomeController">
+   <children>
+      <Line endX="-215.0" endY="687.0" layoutX="225.0" layoutY="123.0" startX="-215.0" startY="-113.0" strokeWidth="10.0" />
+      <BarChart layoutX="78.0" layoutY="187.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <Label layoutX="119.0" layoutY="129.0" prefHeight="43.0" prefWidth="155.0" style="-fx-background-color: white;" text="Customer Report">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="128.0" layoutY="608.0" prefHeight="187.0" prefWidth="336.0" style="-fx-background-radius: 20; -fx-background-color: red;" text="Order Detail" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="516.0" layoutY="606.0" prefHeight="187.0" prefWidth="336.0" style="-fx-background-radius: 20; -fx-background-color: red;" text="Item Sales" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

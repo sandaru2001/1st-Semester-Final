@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.ManageDriverController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="20.0" layoutY="20.0" prefHeight="800.0" prefWidth="1111.0">
+         <children>
+            <Label layoutX="428.0" layoutY="28.0" text="Driver Manage">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="127.0" text="Driver Id">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDriverid" layoutX="138.0" layoutY="152.0" onAction="#codeSearchOnAction" prefHeight="50.0" prefWidth="245.0" />
+            <Label layoutX="605.0" layoutY="121.0" text="Driver Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDrivername" layoutX="604.0" layoutY="152.0" prefHeight="50.0" prefWidth="245.0" />
+            <Label layoutX="139.0" layoutY="247.0" text="Driver Address">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDriveraddress" layoutX="138.0" layoutY="272.0" prefHeight="50.0" prefWidth="245.0" />
+            <Label layoutX="605.0" layoutY="247.0" text="Driver Contact">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDrivercontact" layoutX="604.0" layoutY="272.0" prefHeight="50.0" prefWidth="245.0" />
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="376.0" onAction="#btnSaveOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: blue;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="678.0" layoutY="376.0" onAction="#btnDeleteOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: red;" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="837.0" layoutY="376.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: green;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="534.0" layoutY="376.0" onAction="#btnClearOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: yellow;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="740.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: grewhitey;" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TableView fx:id="tblDriver" layoutX="11.0" layoutY="443.0" onMouseClicked="#tblDriverOnMouseClicked" prefHeight="287.0" prefWidth="1074.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="153.0" text="Id" />
+                  <TableColumn fx:id="colName" prefWidth="334.0" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="318.0" text="Address" />
+                  <TableColumn fx:id="colContact" prefWidth="267.0" text="Contact" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Line endX="-243.0" endY="677.0" layoutX="252.0" layoutY="150.0" startX="-243.0" startY="-141.0" strokeWidth="10.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.ManageVehicleController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="5.0" layoutY="5.0" prefHeight="800.0" prefWidth="1111.0">
+         <children>
+            <Label layoutX="428.0" layoutY="28.0" text="Manage Vehicle">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="127.0" text="Vehicle No">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtVehicleno" layoutX="138.0" layoutY="152.0" onAction="#codeSearchOnAction" prefHeight="50.0" prefWidth="245.0" />
+            <Label layoutX="603.0" layoutY="123.0" text="Vehicle Type">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtVehicletype" layoutX="604.0" layoutY="152.0" prefHeight="50.0" prefWidth="245.0" />
+            <Label layoutX="383.0" layoutY="232.0" text="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDescription" layoutX="383.0" layoutY="259.0" prefHeight="50.0" prefWidth="245.0" />
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="376.0" onAction="#btnSaveOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: blue;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="678.0" layoutY="376.0" onAction="#btnDeleteOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: red;" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="837.0" layoutY="376.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: green;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="534.0" layoutY="376.0" onAction="#btnClearOnAction" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: yellow;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="740.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: grewhitey;" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TableView fx:id="tblVehicle" layoutX="22.0" layoutY="443.0" onMouseClicked="#tblVehicleOnMouseClicked" prefHeight="287.0" prefWidth="1074.0">
+               <columns>
+                  <TableColumn fx:id="colVehino" prefWidth="300.0" text="Vehicle No" />
+                  <TableColumn fx:id="colDesc" prefWidth="500.0" text="Description" />
+                  <TableColumn fx:id="colVehiType" prefWidth="300.0" text="Vehicle Type" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Line endX="-224.0" endY="682.0" layoutX="235.0" layoutY="133.0" startX="-224.0" startY="-122.0" strokeWidth="10.0" />
+   </children>
+</AnchorPane>
